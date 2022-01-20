@@ -1,0 +1,209 @@
+﻿@model ProjectPet.Models.User
+@{
+    ViewBag.Title = "Login";
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=s3cbJqvQLzNvfiMcMMI4lvpJi61Xt8Pn4L7xhSRl_-vOh5-XQannlW1MORYxL4lUgjW4a2EK8qwQBKyQV7GRGVKpIbWoDcyutKZVj5BvTjaN0e8ONo2T7cbgp0Bx2bqYSPtkk_1Qt_hk8GoWUH7rF-BggTNi8zTSgqDWMiBXjWKUUVDO_X6vFu4FGN9QPEnHBL-fk_zjK35997MJQraGnBfwvQRKg9imq1J2YNzRSkgdpN7OHIx8jqVcMb3UoJKfl4f1gHjYPnXNTjeCivrN5a3htSJO3teQLPxCpLcD1Uvkhw2ivnYREXtkX8veJJeoys3NBaGWPE-F-LMlI2D4hmQQ4ykFvButbZ_I7kcgJsjhVam1pfAboRTJoVTggFu4HGKQV7GeAl2BM_k3ZvoQFYzhtuTbBa_0JKty7tqRWBlDAouXGR3fhsKvF3NKRirt8Fd58fP3ubT_T8U1TKc4FC4ozXOPpSRiqWxVWYsCB7_VdEXfAPVvmgm2S7_kXZ93fPuW4kQ_e1L4OzdujEplGodQvQ4G-jNF45xpAyJEsqMdyfT75Hu6hRkyGZMM3unwCltSDdV8TYSQQzqBMc0_0HqL4QpW3s9C6R4TZt85CDn3Ff9m3Rr77QLiCEVkqsdMURCLaxZhP-QZpNFjEi4g2pwH_ggV2aN2sZH8zGWBU0ECIxmDEZLOJZ8jYBaTHHLyzrVV1bxXg4DKbpPUUtehU0KgGpPCROnRSoXGBmXFD6KzATcdG245Jq9bFwe13BbaI8kC4xAjTS5akAC8GKnLmuPe7MywUkFPtziHMMkKFuy0cBjKad4W2dy2R0B5AEnT4OFnFHqR58eYQGcwfsjTrnGJ9ME9zKaixNTsIntNzGNsK6Wu2r_PUDpguNDYYcnujpJOTyfo9-AhFQBGK5wsr28xkLh5ACsOPOw_T83aeERtYIpx6_XCP37Q2EE6Ya7z2bYG8xIO72PELgH9gbQu4_NfJN4IQGgRWVV8ihUD7PWACWI2Uyrzc2sEPGZ4fFs3N5ljZeePdfZrHQcunIob2xoRjqIHNjrXpPToUOlytet_S5ZEN7xEBqU_XrHdbXwOt5XblttRQ0r14943qKsMFgIKQIacVQrgdm8zgOdLyaQnYBl223ZbOaYxtX0z4pbnEJbsiKkhPxGnP2aG5sfMVvJewiLez4ro0y0qdL62DUUlcNoIq7MUMU0Psgty3OUD64XP6zE5PGFBuXc2Xtb-JA" nonce="4e29a8d2b021bf88762b6e98710338b9" charset="UTF-8"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @@-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @@keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @@media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to Purple Pets</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="#" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="~/images/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+
+                <div class="form-group" style="color:black">
+                    <div style="font-size:100%">
+                        @Html.LabelFor(model => model.User_Name, new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.User_Name, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="color:black">
+                    <div style="font-size:100%">
+
+                        @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                        @Html.Password("password", "", new { id = "password", placeholder = "  ", Textmode = "Password" })
+
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <input type="submit" value="Login" name="login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                @Html.ActionLink("Register", "Index")
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

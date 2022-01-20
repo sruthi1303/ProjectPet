@@ -1,0 +1,228 @@
+﻿@{
+    ViewBag.Title = "about";
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Purple Pets | About Us</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/images/favicon.ico">
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+    <link rel="stylesheet" href="~/css/Homestyle.css">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li>@Html.ActionLink("Home", "Home")</li>
+                            <li class="current"> @Html.ActionLink("About", "about") </li>
+                            <li>@Html.ActionLink("Services", "services")</li>
+                            <li> @Html.ActionLink("Billing", "Employ") </li>
+                            <li> @Html.ActionLink("Contact", "contacts") </li>
+
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="page1_block nb">
+        <div class="container_12">
+            <div class="grid_7">
+                <h2>What we do</h2>
+                <br>
+                <img src="~/images/page2_img1.jpg" alt="" class="img_inner fleft i1">
+                <div class="extra_wrapper">
+                    <p class="col1"><a href="#">PROVIDE A PROTECTED AND CLEAN LIVING ENVIRONMENT FOR YOUR PETS</a></p>
+                    Feed a quality diet and prevent obesity,Engage and do not leave the along for a long time.
+                </div>
+                <div class="clear"></div>
+                Communicate with your dog and develop a relationship,train your dog to follow the simple commands.we mainly focus on bringing health and happiness to your pets.Take them for a walk everyday for at least hlf an hour,Provide them with the needed vaccination on time.Provide them with a good and comfortable shelter.Our main motto is to love them unconditionally,treat them like our family.<br>
+                <a href="#" class="btn">More</a>
+            </div>
+            <div class="grid_4 prefix_1">
+                <h2 class="ic1">What we offer</h2>
+                <ul class="list l1">
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">1</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Best Food Products</a></div>
+                            We offer best Quality food Products for your Pets.We always care for your pets.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="cnt">
+                            <time datetime="2045-01-01">2</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Best Pet Products</a></div>
+                            We offer variety of Products for your pets at the best rate.
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">3</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Gifts on every Purchase</a></div>
+                            Your every Purchase has a special gift
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container_12">
+            <div class="grid_12">
+                <h2 class="ic1">Useful To Know</h2>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img2.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Cats</a></div>
+                        Cats are believed to be the only mammals who don't taste sweetness.
+                    </div>
+                    <div class="clear"></div>
+                     Cats are nearsighted, but their peripheral vision and night vision are much better than that of humans. Cats are supposed to have 18 toes. Cats can jump up to six times their length.
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img3.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Dogs </a></div>
+                        Dogs are as smart as a two-year-old baby.
+                    </div>
+                    <div class="clear"></div>
+                    Their sense of smell is at least 40x better than ours,Dogs can sniff at the same time as breathing.Some are fast and could even beat a cheetah!Dogs don't sweat like we do.
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img4.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Rodents</a></div>
+                        When the cats away, the mice will play
+                    </div>
+                    <div class="clear"></div>
+                    Well-known rodents include mice, rats, squirrels, prairie dogs, porcupines, beavers, guinea pigs, and hamsters. They use their sharp incisors to gnaw food, excavate burrows, and defend themselves.
+                </div>
+            </div>
+            <div class="clear he1"></div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img5.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Birds</a></div>
+                        Many birds including species of gulls,raptors and ducks undergo a change in eye color as they age from juveniles to adults
+                    </div>
+                    <div class="clear"></div>
+                    Chickens and ostriches are the closest modern relatives to Tyrannosaurus rex,Baby hoatzins have tiny claws on their wings.Crows and ravens are extremely intelligent.Pigeons can recognize human faces.
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img6.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Fish</a></div>
+                        There are over 30,000 different species of fish
+                    </div>
+                    <div class="clear"></div>
+                    Fish have very sharp vision. They can also smell, touch, feel, and taste, just like us. Plus, they can sense light, chemicals, vibrations, and electricity.
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img7.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Reptiles</a></div>
+                        Every Reptile Has Scales and their are Cold-Blooded
+                    </div>
+                    <div class="clear"></div>
+                    Reptiles breathe air.Reptiles are covered in scales or have a bony external plate such as a shell.Nearly all reptiles are cold blooded.The first reptiles are believed to have evolved around 320 million years ago.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_block bot1">
+        <div class="container_12">
+            <div class="grid_12">
+                <h2>Our Staff </h2>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page2_img8.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper">
+                        <div class="col2"><a href="#">Kim Taehyung</a></div>
+                        born on December 31, 1995<br />
+                        Level 2 Diploma in Work-based Animal Care.
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/jimin.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper">
+                        <div class="col2"><a href="#">Park Jimin</a></div>
+                        born on October 13, 1995 <br/>
+                        Level 2 Diploma in Animal Care.
+                        Level 3 Extended Diploma in Animal Management.
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/jungkook.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper">
+                        <div class="col2"><a href="#">Jungkook</a></div>
+                        born on September 01, 1997 <br />
+                        Level 3 Certificate in the Principles of Animal Management within a Store.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+                <p>Purple Pets &copy; 2021 | <a href="#">Privacy Policy</a> </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>

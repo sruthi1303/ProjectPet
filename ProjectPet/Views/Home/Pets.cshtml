@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "Pets";
+    Layout = null;
+}
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 400px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1 style="background-color:deeppink"> Available Pets</h1>
+
+        <hr />
+        <h2>Dogs</h2>
+        <hr />
+        <div class="row">
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/beagle.jpg" />
+                <h2>Beagle Puppy</h2>
+                <p>Price: Rs.4450 <br />3 months pup</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/bulldog.jpg">
+                <h2>BUll dog Puppy</h2>
+                <p>Price: Rs.6000 <br />2 months pup</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/labrador.jpg" />
+                <h2>Labrador Puppy</h2>
+                <p>Price: Rs.5000 <br />2 months pup</p>
+            </div>
+        </div>
+
+
+        <hr />
+        <h2>Cats</h2>
+        <hr />
+        <div class="row">
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/BengalCat.jpg" />
+                <h2>Bengal Cat</h2>
+                <p>Price: Rs.3850 <br />3 months Cat</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/Persian Cat.jpg" />
+                <h2>Persian Cat</h2>
+                <p>Price: Rs.3500 <br />2 months Cat</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/RAGDOLL.jpg" />
+                <h2>Ragdoll Cat</h2>
+                <p>Price: Rs.2000 <br />4 months Cat</p>
+            </div>
+        </div>
+
+        <hr />
+        <h2>Birds</h2>
+        <hr />
+        <div class="row">
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/LoveBirds.jpg" />
+                <h2>Love Bird</h2>
+                <p>Price: Rs.450 <br />Original Breed</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/JungleBird.png" />
+                <h2>Jungle Bird</h2>
+                <p>Price: Rs.600 <br />Original Breed</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/Parrot.jpg" />
+                <h2>Green Parrot</h2>
+                <p>Price: Rs.100 <br />Original Breed</p>
+            </div>
+        </div>
+
+
+        <hr />
+        <h2>Fish</h2>
+        <hr />
+        <div class="row">
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/Gold Fish (2).jpg" />
+                <h2>Gold Fish</h2>
+                <p>Price: Rs.350 <br />Original Breed</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/bettafish (1).jpg" />
+                <h2>Betta Fish</h2>
+                <p>Price: Rs.700 <br />Original Breed</p>
+            </div>
+            <div class="column" style="background-color:antiquewhite">
+                <img src="~/ResizedImages/shark (1).jpg" />
+                <h2>Baby Shark</h2>
+                <p>Price: Rs.500 <br />Original Breed</p>
+            </div>
+        </div>
+
+
+    </center>
+
+    <a class=" btn btn-primary btn-sm" href="@Url.Action("Home")"> Back</a>
+
+</body>
+</html>

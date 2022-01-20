@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "services";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pet Club | Services</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/images/favicon.ico">
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+    <link rel="stylesheet" href="~/css/Homestyle.css">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script>
+jQuery(document).ready(function () {
+    $().UItoTop({
+        easingType: 'easeOutQuart'
+    });
+});
+    </script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li>@Html.ActionLink("Home", "Home")</li>
+                            <li>
+                                 @Html.ActionLink("About", "about")
+                                <ul>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Archive</a></li>
+                                </ul>
+                            </li>
+                            <li class="current"> @Html.ActionLink("Services", "services")</li>
+                            <li>@Html.ActionLink("Billing", "Employ")</li>
+                            <li>@Html.ActionLink("Contact", "contacts")</li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="page1_block nb">
+        <div class="container_12">
+            <div class="grid_7">
+                <h2>We Recommend</h2>
+                <br>
+                <img src="~/images/page3_img1.jpg" alt="" class="img_inner fleft i1">
+                <div class="extra_wrapper">
+                    <p class="col1"><a href="#">Everything you need to know to choose the right food for your Pet,Be sure to pick the food that’s right for your dog’s stage of life.</a></p>
+                    Just like we do, Pets love food treats. And just like us, pets sometimes get too many calories from their treats
+                </div>
+                <div class="clear"></div>
+                The right kind of nourishment helps keep your pet healthy. Overfeeding your pet can cause weight gain, which can lead to joint problems and other health issues.Keeping portion sizes consistent and appropriate based on your pets age, weight and activity levels will help pets to maintain its ideal weight and remain active.
+                <br>
+                <a href="#" class="btn">More</a>
+                <div class="clear he2"></div>
+                <img src="~/images/page3_img2.jpg" alt="" class="img_inner fleft i1">
+                <div class="extra_wrapper">
+                    <p class="col1"><a href="#">Never restrict your pets and dont tie them harder.</a></p>
+                    You literally feel better around your pet whenever your stressed out spend time with your pets.
+                </div>
+                <div class="clear"></div>
+                Playtime is one of the most healthy activities you can do with your dog. Not only does your pup enjoy playing games with you, but they're also getting exercised.Spending time with your pet can have a calming effect.Work out together. Instead of going to the gym, take a walk with your pet.Treat them like family they will see you as their whole world.
+                <br>
+                <a href="#" class="btn">More</a>
+            </div>
+            <div class="grid_4 prefix_1">
+                <h2 class="ic1">Main Services</h2>
+                <ul class="list l1">
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">1</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Pet Health Care</a></div>
+                            By bringing your pet in to see us regularly, we are better able to detect diseases and other conditions that could put your pet's health at risk if left untreated.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="cnt">
+                            <time datetime="2045-01-01">2</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Massage Therapy</a></div>
+                            Regular therapeutic massages can be a great way for your pets to maintain a healthy activity level and help them live longer and happier lives
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">3</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Pet Grooming</a></div>
+                            Responsibilities can include washing and styling a pet's hair, brushing their teeth, trimming their nails, and delivering excellent customer service to pet owners
+                        </div>
+                    </li>
+                    <li>
+                        <span class="cnt">
+                            <time datetime="2045-01-01">4</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Pet Boarding</a></div>
+                            A place your dog stays overnight,We care your pets more than you care your pets.
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">5</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Pet Training</a></div>
+                            We provide basic obedience training with the owner and training for specialized activities such as search dog sports, protection, and detection
+                        </div>
+                    </li>
+                    <li>
+                        <span class="cnt">
+                            <time datetime="2045-01-01">6</time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1"><a href="#">Pet Breeding</a></div>
+                            We help your pet companion to make their younger generation.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container_12">
+            <div class="grid_12">
+                <h2 class="ic1">Special Services</h2>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page3_img3.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Obedient Training</a></div>
+                        We change your aggressive pets to a obedient one.
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page3_img4.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Gifts for every Purchase</a></div>
+                        Special gifts will be provide for each purchase you make.
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="pad2">
+                    <img src="~/images/page3_img5.jpg" alt="" class="img_inner fleft i2">
+                    <div class="extra_wrapper">
+                        <div class="text2 col2"><a href="#">Spent Time with us</a></div>
+                        You can spent your time with our pets and get to know each other before buying.
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+                <p>Purple Pets &copy; 2021 | <a href="#">Privacy Policy</a> </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>

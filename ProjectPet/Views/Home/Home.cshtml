@@ -1,0 +1,280 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Purple Pets</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/images/favicon.ico">
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+    <link rel="stylesheet" href="~/css/Homestyle.css">
+    <link rel="stylesheet" href="~/css/slider.css">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/tms-0.4.1.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.slider')._TMS({
+                show: 1,
+                pauseOnHover: false,
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: false,
+                duration: 800,
+                preset: 'fade',
+                pagination: true, //'.pagination',true,'<ul></ul>'
+                pagNums: false,
+                slideshow: 8000,
+                numStatus: false,
+                banners: true,
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+
+
+
+        $(window).load(function () {
+            $('.carousel1').carouFredSel({
+                auto: false,
+                prev: '.prev',
+                next: '.next',
+                width: 960,
+                items: {
+                    visible: {
+                        min: 3,
+                        max: 3
+                    },
+                    height: 'auto',
+                    width: 300,
+                },
+                responsive: true,
+                scroll: 1,
+                mousewheel: false,
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                }
+            });
+        });
+        jQuery(document).ready(function () {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+
+
+    <!--[if lt IE 9]>
+    <script src="~/js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body class="page1">
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li class="current">@Html.ActionLink("Home", "Home")</li>
+                            <li class="with_ul"> @Html.ActionLink("About", "about") </li>
+                            <li>@Html.ActionLink("Services", "services")</li>
+                            <li> @Html.ActionLink("Billing", "Employ") </li>
+                            <li> @Html.ActionLink("Contact", "contacts") </li>
+                            <li> @Html.ActionLink("Log Out", "Login","Account") </li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="top_block">
+        <div class="slider-relative">
+            <div class="slider-block">
+                <div class="slider">
+                    <ul class="items">
+                        <li>
+                            <img src="~/images/slide.jpg" alt="">
+                            <div class="banner">
+                                They Need Your <span>Love</span> and <i>Care</i>
+                                <p>It is so easy to make them happy</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="~/images/slide1.jpg" alt="">
+                            <div class="banner">
+                                They Need Your <span>Love</span> and <i>Care</i>
+                                <p>It is so easy to make them happy</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="~/images/slide2.jpg" alt="">
+                            <div class="banner">
+                                They Need Your <span>Love</span> and <i>Care</i>
+                                <p>It is so easy to make them happy</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="~/images/slide3.jpg" alt="">
+                            <div class="banner">
+                                They Need Your <span>Love</span> and <i>Care</i>
+                                <p>It is so easy to make them happy</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page1_block">
+        <div class="container_12">
+            <div class="grid_6">
+                <h2>Welcome to Purple Pets</h2>
+                <br>
+                <img src="~/images/page1_img5.jpg" alt="" class="img_inner fleft">
+                <div class="extra_wrapper style1">
+                    <p class="text1">We provide complete solution for your companion, We care your pets more than us.
+                </div>
+                <div class="clear"></div>
+                Our perfect companions never have fewer than four feet.Our mission is to provide our customers with a great selection of high quality Pet Products and Pet Foods at the best price possible. We invite you to shop and compare our prices with any other pet supply store, pet supply chain store, grocery store or mass market retailer. We have everyday low prices and hot weekly specials!.
+                <br>
+                <a class=" btn btn-primary btn-sm" href="@Url.Action("Pets")">View Available Pets</a>
+            </div>
+            <div class="grid_5 prefix_1">
+                <h2 class="ic1">Latest offers</h2>
+                <ul class="list">
+                    <li>
+                        <span>
+                            <time datetime="2045-01-01">14<span>Jan</span></time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1">
+                                <a href="#">Discount of 30%</a>
+                                <time datetime="2022-01-01">January 14.01.22</time>
+                            </div>
+                            Discounts of up to 30% on dog supplies are available.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="cnt">
+                            <time datetime="2022-01-01">15<span>Jan</span></time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1">
+                                <a href="#">25% Discount on food</a>
+                                <time datetime="2022-01-01">January 15.01.22</time>
+                            </div>
+                            Small animal food get upto 25% discount
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            <time datetime="2022-01-01">16<span>Jan</span></time>
+                        </span>
+                        <div class="extra_wrapper">
+                            <div class="col1">
+                                <a href="#">Best deal</a>
+                                <time datetime="2022-01-01">January 16.01.22</time>
+                            </div>
+                            The price of cat litter starts at Rs 1455 and shipping is free.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content page1">
+        <div class="container_12">
+            <div class="grid_12">
+                <a href="#" class="next"></a><a href="#" class="prev"></a>
+                <h2>Pets for Adoption</h2>
+            </div>
+            <div class="clear"></div>
+            <ul class="carousel1">
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img1.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">Kitten </a></p>
+                        They didn't choose their fate, Open your heart to homeless Kittens.
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img2.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">Parrot</a></p>
+                        Just remember birds are not meant to be caged, adopt the pace of nature and fly with them.
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img3.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">Dogs</a></p>
+                        No matter how little money and how few possessions you make having a dog makes you rich.
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img4.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">puppy</a></p>
+                        All great friendships start with a paw-shake,reach out.They leave paw prints on your hearts.
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img5.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">Cats</a></p>
+                        Be the kindest soul to adopt the needful souls.
+                    </div>
+                </li>
+                <li class="grid_4">
+                    <img src="~/images/carousel1_img6.jpg" alt="" class="img_inner fleft">
+                    <div class="extra_wrapper pad1">
+                        <p class="col2"><a href="#">squirrel</a></p>
+                        Be an angel for pets,Adoption can change their life.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_block">
+        <div class="container_12">
+            <div class="grid_6">
+                <h2>Pet Care Tips </h2>
+                <br>
+                Feed your pet a good and high-quality foods,Take them for a walk every day for at least half an hour.Provide them with the needed vaccination on time.Keep a clean and hygienic environment for them. Visit Vet on a weekly/monthly basis.Engage and do not leave them alone for a long time.Provide them with a good and comfortable shelter. Keep them away from dust and allergies.Love them unconditionally, treat them like your family, talk to them
+            </div>
+            <div class="grid_4 prefix_2">
+                <h2 class="ic1">Any Question?</h2>
+                <img src="~/images/page1_img4.jpg" alt="" class="fleft img_inner">
+                <div class="extra_wrapper">
+                    <div class="cont"> Call Us Free: <span>+9000000000</span> </div>
+                </div>
+                <div class="clear"></div>
+                Reduce your stress and play with your pets :)
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+                <p>Purple Pets &copy; 2021 | <a href="#">Privacy Policy</a> </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+</html>

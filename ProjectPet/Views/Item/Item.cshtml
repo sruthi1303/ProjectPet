@@ -1,0 +1,157 @@
+﻿@model IEnumerable<ProjectPet.Models.Item>
+
+@{
+    ViewBag.Title = "Item";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Purple Pets | Admin | Item </title>
+    <meta charset="utf-8">
+    <link rel="icon" href="~/images/favicon.ico">
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+    <link rel="stylesheet" href="~/css/Homestyle.css">
+    <link rel="stylesheet" href="~/css/form.css">
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/forms.js"></script>
+    <script src="~/js/jquery-migrate-1.1.1.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li> @Html.ActionLink("Home", "Admin", "Home")</li>
+                            <li>
+                                @Html.ActionLink("Employees", "Emp", "Employee")
+                            </li>
+                            <li> @Html.ActionLink("Customers", "Customer", "Customer")</li>
+                            <li  class="current"> @Html.ActionLink("Items", "Item", "Item")</li>
+                            <li> @Html.ActionLink("Billing", "Employ", "Home") </li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+<style>
+    h3 {
+        font: bold 100% sans-serif;
+        letter-spacing: 0.5em;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        font-size: large;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    th {
+        font-size: 15px;
+        color: black;
+    }
+</style>
+<center>
+    <div>
+        <div>
+            <br />
+            <div class="Container border-r-0 bg-purple-700">
+                <h3>Item Details</h3>
+            </div>
+            <hr class="hr-dotted" />
+            <div class="Container well">
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <br />
+                        <a class=" btn btn-primary btn-sm" href="@Url.Action("ICreate")">Create</a>
+                        <br />
+
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <table class="table" style="width:100%">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ItemId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ItemName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ItemPrice)
+                    </th>
+                   
+                    <th>
+
+                    </th>
+
+                </tr>
+                @foreach (var it in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => it.ItemId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => it.ItemName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => it.ItemPrice)
+                        </td>
+                        
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="@Url.Action("IEdit",it)">Edit</a>
+                            <a class="btn btn-primary btn-sm" href="@Url.Action("IDelete",it)">Delete</a>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+            <iframe></iframe>
+        </div>
+    </div>
+</center>
+
+
+
