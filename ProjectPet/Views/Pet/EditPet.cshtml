@@ -1,0 +1,169 @@
+﻿@model ProjectPet.Models.Pet
+@{
+    ViewBag.Title = "EditPet";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li> @Html.ActionLink("Home", "Admin","Home")</li>
+                            <li> @Html.ActionLink("Customers", "Customer", "Customer")</li>
+                            <li>
+                                @Html.ActionLink("Employees", "Emp", "Employee")
+                            </li>
+                            <li> @Html.ActionLink("Items", "Item", "Item")</li>
+                            <li> @Html.ActionLink("Billing", "Employ", "Home")</li>
+                            <li class="current"> @Html.ActionLink("Pets", "ViewPet", "Pet")</li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+</body>
+
+<style>
+    h3 {
+        font: bold 100% sans-serif;
+        letter-spacing: 0.5em;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        font-size: large;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    th {
+        font-size: 15px;
+        color: black;
+    }
+</style>
+<br />
+<div class="Container border-r-0 bg-purple-700">
+    <h3>Edit Pet</h3>
+</div>
+<hr class="hr-dotted" />
+
+
+<center>
+    @using (Html.BeginForm("Pet", "Pet", null, FormMethod.Post,
+                                  new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <fieldset>
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.PetId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PetId, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.PetId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.Breed, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Breed, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.Breed, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.Age, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group" style="color:black">
+                <div style="font-size:150%">
+
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control text-capitalize" } })
+                        @Html.ValidationMessageFor(Model => Model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <legend>Image</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.image)
+            </div>
+            <div class="editor-field">
+                <input id="ImagePath" title="Upload a product image"
+                       type="file" name="file" />
+            </div>
+            <br />
+            <p><input type="submit" value="Edit" /></p>
+        </fieldset>
+    }
+    <div>
+
+    </div>
+    <a class="btn btn-primary btn-sm" href="@Url.Action("ViewPet")">Back</a>
+
+
+</center>

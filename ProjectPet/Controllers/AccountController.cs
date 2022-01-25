@@ -18,7 +18,7 @@ namespace ProjectPet.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(User us)
+        public ActionResult Index([Bind] User us)
         {
             db.Users.Add(us);
             db.SaveChanges();

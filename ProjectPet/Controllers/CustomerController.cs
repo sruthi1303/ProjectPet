@@ -17,13 +17,13 @@ namespace ProjectPet.Controllers
         }
 
 
-        public ActionResult CEdit(Customer customer)
+        public ActionResult Edit(Customer customer)
         {
             return View(customer);
         }
-        [HttpPost, ActionName("CEdit")]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult CEditPost([Bind(Include = "CustomerId, CustomerName, CustomerMail, CustomerGender, CustomerPhoneNo, CustomerAddress")] Customer customer)
+        public ActionResult EditPost([Bind(Include = "CustomerId, CustomerName, CustomerMail, CustomerGender, CustomerPhoneNo, CustomerAddress")] Customer customer)
             
         {
             if (ModelState.IsValid)
@@ -35,13 +35,13 @@ namespace ProjectPet.Controllers
             return View(customer);
         }
 
-        public ActionResult CCreate()
+        public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CCreate([Bind(Include = "CustomerId, CustomerName, CustomerMail, CustomerGender, CustomerPhoneNo, CustomerAddress")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerId, CustomerName, CustomerMail, CustomerGender, CustomerPhoneNo, CustomerAddress")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -51,13 +51,13 @@ namespace ProjectPet.Controllers
             return View(customer);
         }
 
-        public ActionResult CDelete(Customer customer)
+        public ActionResult Delete(Customer customer)
         {
             return View(customer);
         }
-        [HttpPost,ActionName("CDelete")]
+        [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult CDeleteConfirmed(int CustomerId)
+        public ActionResult DeleteConfirmed(int CustomerId)
         {
             Customer customer = db.Customers.Find(CustomerId);
             db.Customers.Remove(customer);

@@ -1,0 +1,112 @@
+﻿@model ProjectPet.Models.Pet
+@{
+    ViewBag.Title = "DeletePet";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><img src="~/images/logo.png" alt=""> </h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li> @Html.ActionLink("Home", "Admin","Home")</li>
+                            <li> @Html.ActionLink("Customers", "Customer", "Customer")</li>
+                            <li >
+                                @Html.ActionLink("Employees", "Emp", "Employee")
+                            </li>
+                            <li> @Html.ActionLink("Items", "Item", "Item")</li>
+                            <li> @Html.ActionLink("Billing", "Employ", "Home")</li>
+                            <li class="current"> @Html.ActionLink("Pets", "ViewPet", "Pet")</li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+</body>
+
+<style>
+    h3 {
+        font: bold 100% sans-serif;
+        letter-spacing: 0.5em;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        font-size: large;
+    }
+
+    dt {
+        font-weight: bold;
+        color: black;
+    }
+</style>
+
+
+<center>
+    <br />
+    <div class="Container border-r-0 bg-purple-700">
+        <h3>Do you want to delete this &#128542 </h3>
+    </div>
+    <hr class="hr-dotted" />
+
+        <dl class="d-lg-table">
+            <dt>
+                @Html.DisplayNameFor(model => model.PetId)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PetId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Breed)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Breed)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.image)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.image)
+            </dd>
+        </dl>
+        <br />
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-action no-color">
+                <center> <input type="submit" value="Delete" clss="btn btn-danger" /> </center>
+                <a class="btn btn-primary btn-sm" href="@Url.Action("ViewPet")">Back</a>
+            </div>
+        }
+    </center>

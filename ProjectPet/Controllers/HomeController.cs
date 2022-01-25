@@ -76,19 +76,14 @@ namespace ProjectPet.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public ActionResult contacts()
         {
 
             return View();
         }
-        [HttpPost]
-        public ActionResult contacts([Bind(Include = "FeedId, CustName, CustMail, CustPhone, CustFeedback")]Feedback feedback)
-        {
-            db.Feedbacks.Add(feedback);
-            db.SaveChanges();
-            return View(feedback);
-        }
+       
         public ActionResult about()
         {
             return View();
@@ -111,11 +106,7 @@ namespace ProjectPet.Controllers
             return View();
         }
 
-        public ActionResult Pets()
-        {
-            return View();
-        }
-
+       
       
     }
 }

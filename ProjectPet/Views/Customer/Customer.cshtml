@@ -2,37 +2,11 @@
 
 @{
     ViewBag.Title = "Customer";
-    Layout = null;
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Purple Pets | Admin | Customer </title>
-    <meta charset="utf-8">
-    <link rel="icon" href="~/images/favicon.ico">
-    <link rel="shortcut icon" href="~/images/favicon.ico">
-    <link rel="stylesheet" href="~/css/Homestyle.css">
-    <link rel="stylesheet" href="~/css/form.css">
-    <script src="~/js/jquery.js"></script>
-    <script src="~/js/forms.js"></script>
-    <script src="~/js/jquery-migrate-1.1.1.js"></script>
-    <script src="~/js/superfish.js"></script>
-    <script src="~/js/jquery.equalheights.js"></script>
-    <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/jquery.ui.totop.js"></script>
-    <script>
-        jQuery(document).ready(function () {
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-        });
-    </script>
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <link rel="stylesheet" media="screen" href="css/ie.css">
-    <![endif]-->
-</head>
+
 <body>
     <header>
         <div class="container_12">
@@ -41,13 +15,14 @@
                 <div class="menu_block">
                     <nav>
                         <ul class="sf-menu">
-                            <li> @Html.ActionLink("Home", "Admin","Home")</li>
+                            <li> @Html.ActionLink("Home", "Admin", "Home")</li>
+                            <li class="current"> @Html.ActionLink("Customers", "Customer", "Customer")</li>
                             <li >
-                                @Html.ActionLink("Employees", "Emp","Employee")
+                                @Html.ActionLink("Employees", "Emp", "Employee")
                             </li>
-                            <li class="current"> @Html.ActionLink("Customers", "Customer","Customer")</li>
-                            <li> @Html.ActionLink("Items", "Item","Item")</li>
-                            <li> @Html.ActionLink("Billing", "Employ","Home") </li>
+                            <li> @Html.ActionLink("Items", "Item", "Item")</li>
+                            <li> @Html.ActionLink("Billing", "Employ", "Home")</li>
+                            <li> @Html.ActionLink("Pets", "ViewPet", "Pet")</li>
                         </ul>
                     </nav>
                     <div class="clear"></div>
@@ -57,7 +32,6 @@
         </div>
     </header>
 </body>
-</html>
 <style>
     h3 {
         font: bold 100% sans-serif;
@@ -96,7 +70,7 @@
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <br />
-            <a class=" btn btn-primary btn-sm" href="@Url.Action("CCreate")">Create</a>
+            <a class=" btn btn-primary btn-sm" href="@Url.Action("Create")">Create</a>
             <br />
            
 
@@ -153,8 +127,8 @@
                 @Html.DisplayFor(modelItem => Cust.CustomerAddress)
             </td>
             <td>
-                <a class="btn btn-primary btn-sm" href="@Url.Action("CEdit",Cust)">Edit</a>
-                <a class="btn btn-primary btn-sm" href="@Url.Action("CDelete",Cust)">Delete</a>
+                <a class="btn btn-primary btn-sm" href="@Url.Action("Edit",Cust)">Edit</a>
+                <a class="btn btn-primary btn-sm" href="@Url.Action("Delete",Cust)">Delete</a>
 
             </td>
         </tr>

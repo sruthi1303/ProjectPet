@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ProjectPet.Models.Pet>
+@{
+    ViewBag.Title = "AvailablePets";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<body>
+
+        <center>
+            <h1 style="background-color:deeppink"> Available Pets</h1>
+        </center>
+
+        <style>
+            .table td img {
+                width: 30px;
+                height: 29px;
+                border-radius: 100%;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 10px;
+                height: 550px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .p {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-right: 150px;
+                margin-left: 300px;
+            }
+        </style>
+
+        <center>
+            @foreach (var data in Model)
+            {
+
+                <div class="column" style="background-color:antiquewhite">
+                    <div class="row">
+
+                        <h2> Name: @data.Name</h2>
+                        <img src="~/images/@data.image" />
+
+                        <p>
+                            Price: @data.Price<br />
+                            Breed: @data.Breed<br />
+                            Age: @data.Age<br />
+                            Description: @data.Description
+                        </p>
+
+                    </div>
+                </div>
+            }
+
+
+        </center>
+
+    </body>
+
+
+

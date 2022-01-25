@@ -11,14 +11,20 @@ namespace ProjectPet.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Employee
     {
         public int EmpId { get; set; }
         public string EmpName { get; set; }
         public string EmpMail { get; set; }
         public string Gender { get; set; }
+
+        [DataType(DataType.Date)]
         public System.DateTime DOB { get; set; }
+
+        [DataType(DataType.Date)]
+
         public System.DateTime DOJ { get; set; }
         public string Address { get; set; }
     }

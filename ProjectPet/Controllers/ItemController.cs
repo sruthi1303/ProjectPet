@@ -16,13 +16,13 @@ namespace ProjectPet.Controllers
             return View(db.Items.ToList());
         }
 
-        public ActionResult IEdit(Item item)
+        public ActionResult Edit(Item item)
         {
             return View(item);
         }
         [HttpPost, ActionName("IEdit")]
         [ValidateAntiForgeryToken]
-        public ActionResult IEditPost([Bind(Include = "ItemId, ItemName, ItemPrice")] Item item)
+        public ActionResult EditPost([Bind(Include = "ItemId, ItemName, ItemPrice")] Item item)
 
         {
             if (ModelState.IsValid)
@@ -34,13 +34,13 @@ namespace ProjectPet.Controllers
             return View(item);
         }
 
-        public ActionResult ICreate()
+        public ActionResult Create()
         {
             return View();
         }
-        [HttpPost, ActionName("ICreate")]
+        [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult ICreate([Bind(Include = "ItemId, ItemName, ItemPrice")] Item item)
+        public ActionResult Create([Bind(Include = "ItemId, ItemName, ItemPrice")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -51,13 +51,13 @@ namespace ProjectPet.Controllers
             return View(item);
         }
 
-        public ActionResult IDelete(Item item)
+        public ActionResult Delete(Item item)
         {
             return View(item);
         }
-        [HttpPost, ActionName("IDelete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult IDeleteConfirmed(int ItemId)
+        public ActionResult DeleteConfirmed(int ItemId)
         {
             Item item = db.Items.Find(ItemId);
             db.Items.Remove(item);

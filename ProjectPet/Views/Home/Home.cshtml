@@ -87,10 +87,9 @@
                 <div class="menu_block">
                     <nav>
                         <ul class="sf-menu">
-                            <li class="current">@Html.ActionLink("Home", "Home")</li>
+                            <li class="current">@Html.ActionLink("Home", "Home", "Home")</li>
                             <li class="with_ul"> @Html.ActionLink("About", "about") </li>
                             <li>@Html.ActionLink("Services", "services")</li>
-                            <li> @Html.ActionLink("Billing", "Employ") </li>
                             <li> @Html.ActionLink("Contact", "contacts") </li>
                             <li> @Html.ActionLink("Log Out", "Login","Account") </li>
                         </ul>
@@ -151,7 +150,7 @@
                 <div class="clear"></div>
                 Our perfect companions never have fewer than four feet.Our mission is to provide our customers with a great selection of high quality Pet Products and Pet Foods at the best price possible. We invite you to shop and compare our prices with any other pet supply store, pet supply chain store, grocery store or mass market retailer. We have everyday low prices and hot weekly specials!.
                 <br>
-                <a class=" btn btn-primary btn-sm" href="@Url.Action("Pets")">View Available Pets</a>
+                <a class=" btn btn-primary btn-sm" href="@Url.Action("AvailablePets","Pet")">View Available Pets</a>
             </div>
             <div class="grid_5 prefix_1">
                 <h2 class="ic1">Latest offers</h2>

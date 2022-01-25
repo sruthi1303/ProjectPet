@@ -20,13 +20,13 @@ namespace ProjectPet.Controllers
 
         }
 
-        public ActionResult EEdit(Employee employee)
+        public ActionResult Edit(Employee employee)
         {
             return View(employee);
         }
-        [HttpPost, ActionName("EEdit")]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult EEditPost([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, PhoneNo")] Employee employee)
+        public ActionResult EditPost([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, PhoneNo")] Employee employee)
 
         {
             if (ModelState.IsValid)
@@ -38,13 +38,13 @@ namespace ProjectPet.Controllers
             return View(employee);
         }
 
-        public ActionResult ECreate()
+        public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ECreate([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, Address")] Employee employee)
+        public ActionResult Create([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, Address")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -55,13 +55,13 @@ namespace ProjectPet.Controllers
             return View(employee);
         }
 
-        public ActionResult EDelete(Employee employee)
+        public ActionResult Delete(Employee employee)
         {
             return View(employee);
         }
-        [HttpPost, ActionName("EDelete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult EDeleteConfirmed(int EmpId)
+        public ActionResult DeleteConfirmed(int EmpId)
         {
             Employee employee = db.Employees.Find(EmpId);
             db.Employees.Remove(employee);

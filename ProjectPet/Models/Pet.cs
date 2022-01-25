@@ -12,12 +12,14 @@ namespace ProjectPet.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Feedback
+    public partial class Pet
     {
-        public int FeedId { get; set; }
-        public string CustName { get; set; }
-        public string CustMail { get; set; }
-        public decimal CustPhone { get; set; }
-        public string Custfeedback { get; set; }
+        public int PetId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Breed { get; set; }
+        public string Age { get; set; }
+        public string Description { get; set; }
+        public string image { get; set; }
     }
 }
