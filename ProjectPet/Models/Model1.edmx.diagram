@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="11d0ea8a25804694ac023835ef8c2e04" Name="Diagram1">
+      <Diagram DiagramId="cd6e5d4c95884598b433969d3c237677" Name="Diagram1">
         <EntityTypeShape EntityType="Database1Model.Customer" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Employee" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Item" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
@@ -12,9 +12,8 @@
         <EntityTypeShape EntityType="Database1Model.OrderDetail" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.PaymentType" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Pet" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Database1Model.Table" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Database1Model.Transaction" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Transaction" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="Database1Model.FK__OrderDeta__Order__22401542" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

@@ -20,24 +20,7 @@ namespace ProjectPet.Controllers
 
         }
 
-        public ActionResult Edit(Employee employee)
-        {
-            return View(employee);
-        }
-        [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
-        public ActionResult EditPost([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, PhoneNo")] Employee employee)
-
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(employee).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Emp");
-            }
-            return View(employee);
-        }
-
+       
         public ActionResult Create()
         {
             return View();
@@ -49,6 +32,25 @@ namespace ProjectPet.Controllers
             if (ModelState.IsValid)
             {
                 db.Employees.Add(employee);
+                db.SaveChanges();
+                return RedirectToAction("Emp");
+            }
+            return View(employee);
+        }
+
+
+        public ActionResult Edit(Employee employee)
+        {
+            return View(employee);
+        }
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPost([Bind(Include = "EmpId, EmpName, EmpMail, Gender, DOB, DOJ, Address")] Employee employee)
+
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Emp");
             }

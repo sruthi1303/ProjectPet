@@ -7,67 +7,78 @@
 
 <body>
 
-        <center>
-            <h1 style="background-color:deeppink"> Available Pets</h1>
-        </center>
 
-        <style>
-            .table td img {
-                width: 30px;
-                height: 29px;
-                border-radius: 100%;
-            }
+    <center>
+        <h2> Available Pets</h2>
+    </center>
 
-            * {
-                box-sizing: border-box;
-            }
+    <style>
+        .table td img {
+            width: 30px;
+            height: 29px;
+            border-radius: 100%;
+        }
 
-            .column {
-                float: left;
-                width: 33.33%;
-                padding: 10px;
-                height: 550px;
-            }
+        * {
+            box-sizing: border-box;
+        }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 550px;
+        }
 
-            .p {
-                margin-top: 50px;
-                margin-bottom: 50px;
-                margin-right: 150px;
-                margin-left: 300px;
-            }
-        </style>
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-        <center>
-            @foreach (var data in Model)
-            {
+        .p {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-right: 150px;
+            margin-left: 300px;
+        }
+    </style>
 
-                <div class="column" style="background-color:antiquewhite">
-                    <div class="row">
+    <center>
+        @foreach (var data in Model)
+        {
 
-                        <h2> Name: @data.Name</h2>
-                        <img src="~/images/@data.image" />
+            <div class="column" style="background-color:antiquewhite">
+                <div class="row">
 
-                        <p>
-                            Price: @data.Price<br />
-                            Breed: @data.Breed<br />
-                            Age: @data.Age<br />
-                            Description: @data.Description
-                        </p>
+                    <h2> Name: @data.Name</h2>
+                    <img src="~/images/@data.image" />
 
-                    </div>
+                    <p>
+                        Price: @data.Price<br />
+                        Breed: @data.Breed<br />
+                        Age: @data.Age<br />
+                        Description: @data.Description
+                    </p>
+
                 </div>
-            }
+            </div>
 
 
-        </center>
+        }
 
-    </body>
+
+    </center>
+   
+    <center>
+        <hr />
+
+        <br />
+        <a class="btn btn-primary btn-sm" href="@Url.Action("Home","Home")">Back</a>
+    </center>
+
+
+</body>
 
 
 

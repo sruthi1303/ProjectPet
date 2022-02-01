@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -14,12 +15,12 @@ namespace ProjectPet.Controllers
         Database1Entities2 db = new Database1Entities2();
 
         // GET: Pet
-        public ActionResult Pet()
+        public ActionResult CreatePet()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Pet(Pet pet, HttpPostedFileBase file)
+        public ActionResult CreatePet(Pet pet, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -49,16 +50,19 @@ namespace ProjectPet.Controllers
         }
         [HttpPost, ActionName("EditPet")]
         [ValidateAntiForgeryToken]
-        public ActionResult EditPost([Bind(Include = "PetId, Name, Price, Breed, Age, Description, image")] Pet pet)
+        public ActionResult EditPet([Bind(Include = "PetId, Name, Price, Breed, Age, Description, image")] Pet pet, HttpPostedFileBase file)
 
         {
-            if (ModelState.IsValid)
+            if (file != null)
             {
-                db.Entry(pet).State = EntityState.Modified;
+                file.SaveAs(HttpContext.Server.MapPath("~/Images/") + file.FileName);
+                pet.image = file.FileName;
+            }
+                    db.Entry(pet).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("ViewPet");
-            }
-            return View(pet);
+            
+           
         }
 
 
@@ -76,7 +80,7 @@ namespace ProjectPet.Controllers
 
             db.Pets.Remove(pet);
             db.SaveChanges();
-            return RedirectToAction("Pet");
+            return RedirectToAction("ViewPet");
         }
 
         protected override void Dispose(bool disposing)

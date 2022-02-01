@@ -13,18 +13,14 @@ namespace ProjectPet.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class User
+    public partial class User
     {
-       
         public int Id { get; set; }
-
-        //[Required]
-        //[StringLength(50)]
-        //[RegularExpression(@"^(?!.*([ ])\1)(?!.*([A-Za-z])\2{2})\w[a-zA-Z ]*$", ErrorMessage = "The valid Employee Name Should contains only alphabets and single character should not be repeated continuously for more than 2 time ")]
         public string User_Name { get; set; }
-
-       
         public string User_Email { get; set; }
+
+        public System.DateTime DOB { get; set; }
+        public string PhoneNo { get; set; }
         public string Password { get; set; }
         public string Re_Password { get; set; }
     }

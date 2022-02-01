@@ -138,6 +138,8 @@
     <Content Include="css\superfish.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\2gether.png" />
+    <Content Include="images\bt21.png" />
     <Content Include="images\btn_bg.png" />
     <Content Include="images\carousel1_img1.jpg" />
     <Content Include="images\carousel1_img2.jpg" />
@@ -145,6 +147,7 @@
     <Content Include="images\carousel1_img4.jpg" />
     <Content Include="images\carousel1_img5.jpg" />
     <Content Include="images\carousel1_img6.jpg" />
+    <Content Include="images\dogcat.jpg" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\icon1.png" />
     <Content Include="images\icon2.png" />
@@ -285,9 +288,6 @@
     <Compile Include="Models\Pet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Table.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -362,12 +362,13 @@
     <Content Include="Views\Employee\Emp.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Pet\Pet.cshtml" />
+    <Content Include="Views\Pet\CreatePet.cshtml" />
     <Content Include="Views\Pet\ViewPet.cshtml" />
     <Content Include="Views\Pet\EditPet.cshtml" />
     <Content Include="Views\Pet\DeletePet.cshtml" />
     <Content Include="Views\Pet\AvailablePets.cshtml" />
     <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Shared\HomeLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

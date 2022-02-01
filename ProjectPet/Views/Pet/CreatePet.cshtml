@@ -1,7 +1,7 @@
 ﻿@model ProjectPet.Models.Pet
 
 @{
-    ViewBag.Title = "Pet";
+    ViewBag.Title = "CreatePet";
 
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
@@ -69,7 +69,7 @@
 
 
 <center>
-    @using (Html.BeginForm("Pet", "Pet", null, FormMethod.Post,
+    @using (Html.BeginForm("CreatePet", "Pet", null, FormMethod.Post,
                                   new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
@@ -149,7 +149,6 @@
             </div>
             <br />
 
-            <legend>Image</legend>
             <div class="editor-label">
                 @Html.LabelFor(model => model.image)
             </div>
