@@ -176,6 +176,8 @@
                             @Html.LabelFor(model => model.User_Name, new { @class = "control-label col-md-2" })
 
                             @Html.EditorFor(model => model.User_Name, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                            @Html.ValidationMessageFor(Model => Model.User_Name, "", new { @class = "text-danger" })
+
                         </div>
                     </div>
 

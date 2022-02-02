@@ -12,16 +12,39 @@ namespace ProjectPet.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    
 
     public partial class User
     {
+        [Required(ErrorMessage = "User ID is Required")]
         public int Id { get; set; }
+
+
+
+        [Required(ErrorMessage = "User Name is Required")]
+        [RegularExpression(@"(\S\D)+", ErrorMessage = " Space and numbers not allowed")]
+        [StringLength(10, MinimumLength = 3)]
         public string User_Name { get; set; }
+
+
+
+        [Required(ErrorMessage = "Address is Required")]
         public string User_Email { get; set; }
 
-        public System.DateTime DOB { get; set; }
+
+
+        [Required(ErrorMessage = "Phone No is Required")]
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "Phone No should not exceed than 10 characters.")]
         public string PhoneNo { get; set; }
+
+
+
+        [Required(ErrorMessage = "Password  is Required")]
         public string Password { get; set; }
+
+
+
+        [Required(ErrorMessage = "This field  is Required")]
         public string Re_Password { get; set; }
     }
 }

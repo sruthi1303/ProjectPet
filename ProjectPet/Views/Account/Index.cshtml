@@ -10,34 +10,42 @@
                 <h3 style="color:deeppink">Register Now</h3>
             </center>
             <form action="#" method="post">
+                @Html.AntiForgeryToken()
 
                 <div class="input-container">
                     <center>
 
                         <h3> Enter Name</h3>
                         @Html.EditorFor(model => model.User_Name, new { httpAttributes = new { @class = "Cntrol col-md-2", placeholder = "Enter Name" } })
+                        @Html.ValidationMessageFor(Model => Model.User_Name, "", new { @class = "text-danger" })
+
 
                         <h3>Enter Email</h3>
                         @Html.EditorFor(model => model.User_Email, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                        @Html.ValidationMessageFor(Model => Model.User_Email, "", new { @class = "text-danger" })
 
 
 
-                        <h3>Phone NO</h3>
+                        <h3>Phone Number</h3>
                         @Html.EditorFor(model => model.PhoneNo, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                        @Html.ValidationMessageFor(Model => Model.PhoneNo, "", new { @class = "text-danger" })
+
 
                         <h3>Enter Password</h3>
                         @Html.EditorFor(model => model.Password, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                        @Html.ValidationMessageFor(Model => Model.Password, "", new { @class = "text-danger" })
+
 
                         <h3>Confirm Password</h3>
                         @Html.EditorFor(model => model.Re_Password, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                        @Html.ValidationMessageFor(Model => Model.Re_Password, "", new { @class = "text-danger" })
 
-                       <h3>Enter DOB</h3>
-                        @Html.EditorFor(model => model.DOB, new { httpAttributes = new { @class = "Cntrol col-md-4"}})
+
 
                         <br />
 
                         <div class="clearfix">
-                            <button type="button" class="cancelbtn">Cancel</button>
+                            <button onclick="location.href = '@Url.Action("Login","Account")'; return false;" type="button" class="cancelbtn">Cancel</button>
                             <button type="submit" class="signupbtn">Register</button>
                         </div>
 

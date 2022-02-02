@@ -20,7 +20,7 @@ namespace ProjectPet.Controllers
         {
             return View(item);
         }
-        [HttpPost, ActionName("IEdit")]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public ActionResult EditPost([Bind(Include = "ItemId, ItemName, ItemPrice")] Item item)
 

@@ -11,11 +11,18 @@ namespace ProjectPet.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Item
     {
+        [Required(ErrorMessage = "Item ID is Required")]
         public int ItemId { get; set; }
+
+        [Required(ErrorMessage = "Name is Required")]
+        [StringLength(10, MinimumLength = 3)]
         public string ItemName { get; set; }
+
+        [Required(ErrorMessage = "Item Price is Required")]
         public decimal ItemPrice { get; set; }
     }
 }

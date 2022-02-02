@@ -13,11 +13,14 @@ namespace ProjectPet.Controllers
         Database1Entities2 db = new Database1Entities2();
         // GET: Account
         [HttpGet]
+
         public ActionResult Index()
         {
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public ActionResult Index([Bind(Include ="User_Name, User_Email, DOB, PhoneNo, Password, Re_Password")] User us)
         {
             db.Users.Add(us);
@@ -31,6 +34,8 @@ namespace ProjectPet.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public ActionResult Login(User us)
         {
             var Obj = db.Users.Where(x => x.User_Name.Equals(us.User_Name) && x.Password.Equals(us.Password)).FirstOrDefault();
