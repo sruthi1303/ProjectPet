@@ -41,9 +41,15 @@
         font-size: large;
     }
 
-    table, td, th {
+    table {
         border: 1px solid black;
     }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
 
     table {
         border-collapse: collapse;
@@ -96,20 +102,20 @@
                     </th>
                    
                     <th>
-
+                        Action
                     </th>
 
                 </tr>
                 @foreach (var it in Model)
                 {
                     <tr>
-                        <td>
+                        <td  style="padding: 50px 5px 50px 5px">
                             @Html.DisplayFor(modelItem => it.ItemId)
                         </td>
-                        <td>
+                        <td  style="padding: 50px 5px 50px 5px">
                             @Html.DisplayFor(modelItem => it.ItemName)
                         </td>
-                        <td>
+                        <td  style="padding: 50px 5px 50px 5px">
                             @Html.DisplayFor(modelItem => it.ItemPrice)
                         </td>
                         

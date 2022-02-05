@@ -45,6 +45,7 @@ namespace ProjectPet.Models
 
 
         [Required(ErrorMessage = "This field  is Required")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string Re_Password { get; set; }
     }
 }

@@ -42,8 +42,14 @@
         font-size: large;
     }
 
-    table, td, th {
+    table {
         border: 1px solid black;
+
+    }
+
+    td,th{
+        border: 1px solid black;
+        padding: 10px;
     }
 
     table {
@@ -53,6 +59,8 @@
 
     td {
         text-align: center;
+        height: 100%;
+        padding: 50px;
     }
 
     th {
@@ -104,35 +112,35 @@
                 @Html.DisplayNameFor(model => model.image)
             </th>
             <th>
-
+                Action
             </th>
 
         </tr>
         @foreach (var img in Model)
         {
-            <tr>
+            <tr >
 
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.PetId)
                 </td>
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.Name)
                 </td>
 
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.Price)
                 </td>
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.Breed)
                 </td>
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.Description)
                 </td>
-                <td>
+                <td style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => img.Age)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => img.image)
+                    <img src="~/images/@img.image" width="100" height="100" />
                 </td>
                 <td>
                     <a class="btn btn-primary btn-sm" href="@Url.Action("EditPet",img)">Edit</a>

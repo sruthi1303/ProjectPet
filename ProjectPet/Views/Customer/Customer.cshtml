@@ -41,9 +41,15 @@
         color: black;
         font-size: large;
     }
-    table,td,th{
+    table{
         border: 1px solid black;
     }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
     table{
         border-collapse: collapse;
         width:50%;
@@ -101,29 +107,29 @@
             @Html.DisplayNameFor(model => model.CustomerAddress)
         </th>
         <th>
-
+            Action
         </th>
        
     </tr>
     @foreach (var Cust in Model)  
     {
         <tr>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerId)
             </td>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerName)
             </td>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerMail)
             </td>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerGender)
             </td>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerPhoneNo)
             </td>
-            <td>
+            <td  style="padding: 50px 5px 50px 5px">
                 @Html.DisplayFor(modelItem => Cust.CustomerAddress)
             </td>
             <td>

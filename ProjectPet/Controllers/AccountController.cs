@@ -21,7 +21,7 @@ namespace ProjectPet.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Index([Bind(Include ="User_Name, User_Email, DOB, PhoneNo, Password, Re_Password")] User us)
+        public ActionResult Index([Bind(Include ="User_Name, User_Email, PhoneNo, Password, Re_Password")] User us)
         {
             db.Users.Add(us);
             db.SaveChanges();

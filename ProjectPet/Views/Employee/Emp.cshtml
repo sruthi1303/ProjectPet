@@ -40,9 +40,15 @@
         font-size: large;
     }
 
-    table, td, th {
+    table{
         border: 1px solid black;
     }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
 
     table {
         border-collapse: collapse;
@@ -107,33 +113,33 @@
                         @Html.DisplayNameFor(model => model.Address)
                     </th>
                     <th>
-
+                        Action
                     </th>
 
                 </tr>
                 @foreach (var Emp in Model)
                 {
             <tr>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.EmpId)
                 </td>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.EmpName)
                 </td>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.EmpMail)
                 </td>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.Gender)
                 </td>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.DOB)
                 </td>
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.DOJ)
                 </td>
               
-                <td>
+                <td  style="padding: 50px 5px 50px 5px">
                     @Html.DisplayFor(modelItem => Emp.Address)
                 </td>
                 <td>
