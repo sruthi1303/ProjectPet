@@ -164,47 +164,49 @@
         <div id="id01" class="modal">
 
             <form class="modal-content animate" action="#" method="post">
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="~/images/img_avatar2.png" alt="Avatar" class="avatar">
-                </div>
+                    @Html.AntiForgeryToken()
 
-                <div class="container">
-
-                    <div class="form-group" style="color:black">
-                        <div style="font-size:100%">
-                            @Html.LabelFor(model => model.User_Name, new { @class = "control-label col-md-2" })
-
-                            @Html.EditorFor(model => model.User_Name, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
-                            @Html.ValidationMessageFor(Model => Model.User_Name, "", new { @class = "text-danger" })
-
-                        </div>
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="~/images/img_avatar2.png" alt="Avatar" class="avatar">
                     </div>
 
+                    <div class="container">
 
-                    <div class="form-group" style="color:black">
-                        <div style="font-size:100%">
+                        <div class="form-group" style="color:black">
+                            <div style="font-size:100%">
+                                @Html.LabelFor(model => model.User_Name, new { @class = "control-label col-md-2" })
 
-                            @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
-                            @Html.Password("password", "", new { id = "password", placeholder = "  ", Textmode = "Password" })
+                                @Html.EditorFor(model => model.User_Name, new { httpAttributes = new { @class = "Cntrol col-md-2" } })
+                                @Html.ValidationMessageFor(Model => Model.User_Name, "", new { @class = "text-danger" })
 
-                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
                         </div>
+
+
+                        <div class="form-group" style="color:black">
+                            <div style="font-size:100%">
+
+                                @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                                @Html.Password("password", "", new { id = "password", placeholder = "  ", Textmode = "Password" })
+
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Login" name="login">
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
                     </div>
 
-                    <input type="submit" value="Login" name="login">
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <br />
-                    <a class=" btn btn-primary btn-sm" href="@Url.Action("Index")">Click here to Register</a>
-                </div>
-            </form>
-        </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <br />
+                        <a class=" btn btn-primary btn-sm" href="@Url.Action("Index")">Click here to Register</a>
+                    </div>
+                </form>
+</div>
 
         <script>
             // Get the modal

@@ -138,7 +138,6 @@
     <Content Include="css\superfish.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\2gether.png" />
     <Content Include="images\bt21.png" />
     <Content Include="images\btn_bg.png" />
     <Content Include="images\carousel1_img1.jpg" />
